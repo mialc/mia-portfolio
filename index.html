@@ -28,13 +28,15 @@
                     </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     
-                    <ul class="navbar-nav ms-auto gap-3">
+                    <ul class="navbar-nav ms-auto gap-3 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link text-white" href="#hero">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                        <button id="theme-toggle" onclick="var b=document.body;b.dataset.theme==='dark'?b.removeAttribute('data-theme'):b.setAttribute('data-theme','dark')" class="btn btn-sm ms-3 theme-toggle-btn">◐</button>
+                        <li class="nav-item"><a class="nav-link text-white" href="https://github.com/mialc" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="assets/resume/Mia-Carrillo-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                        <button id="theme-toggle" class="btn btn-sm ms-3 theme-toggle-btn">◐</button>
                     </ul>
 
                 </div>
@@ -47,11 +49,14 @@
             <div class="container">
             
                <p class="hero-kicker">&gt; whoami</p>
-               <h2>Hi, I'm Mia Carrillo — Front-End Web Developer in Training</h2>
-               <p>I'm building skills in HTML, CSS, responsive design, JavaScript, and WordPress theme development.</p>
-               <a href="#projects">View My Projects</a>
+               <h2>Hi, I'm Mia Carrillo — Front-End Web Developer</h2>
+               <p>IT student who's shipped a live iOS app as solo founder of Recru, and builds responsive websites with HTML, CSS, Bootstrap, and JavaScript.</p>
+               <div class="hero-cta">
+                   <a href="#projects">View My Projects</a>
+                   <a href="assets/resume/Mia-Carrillo-Resume.pdf" target="_blank" rel="noopener" class="hero-cta-secondary">View Resume</a>
+               </div>
             </div>
-            <button class="scroll-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">↓</button>
+            <button class="scroll-btn" data-scroll-target="about">↓</button>
             </section>
 
             <div class="section-blend blend-hero-about" aria-hidden="true"></div>
@@ -65,7 +70,7 @@
                             <h2 class="text-white fw-bold mb-2">Mia Carrillo</h2>
                             <p class="about-subtitle mb-3">IT Student @ UCF · Front-End Developer · App Founder</p>
                             <p class="about-bio text-white">
-                                I'm an IT student at UCF passionate about building things that look great and work even better. I'm currently learning HTML, CSS, Bootstrap, and WordPress through a front-end internship, preparing for real-world web development work.
+                                I'm an IT student at UCF who builds things that look great and work even better. I designed, built, and launched Recru — a live iOS app — solo, and I'm now building responsive, accessible websites with HTML, CSS, Bootstrap, and JavaScript through a front-end internship at U.S. Hunger.
                             </p>
                         </div>
 
@@ -96,7 +101,7 @@
 
                     </div>
                 </div>
-                <button class="scroll-btn" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">↓</button>
+                <button class="scroll-btn" data-scroll-target="skills">↓</button>
             </section>
 
             <div class="section-blend blend-about-skills" aria-hidden="true"></div>
@@ -119,8 +124,8 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Technical</h5>
-                            <p class="card-text">Front-end fundamentals: semantic HTML, modern CSS (Flexbox & Grid), responsive design, and accessibility best practices. Comfortable with JavaScript basics, version control (Git/GitHub), and development in VS Code.</p>
-                            <p class="card-text"><small class="text-body-secondary">Languages & Tools: HTML · CSS · JS · Git · VS Code</small></p>
+                            <p class="card-text">Front-end fundamentals: semantic HTML, modern CSS (Flexbox & Grid), Bootstrap, responsive design, JavaScript, and accessibility best practices. Comfortable with version control (Git/GitHub) and development in VS Code.</p>
+                            <p class="card-text"><small class="text-body-secondary">Languages & Tools: HTML · CSS · JS · Bootstrap · Git · VS Code</small></p>
                         </div>
                     </div>
                 </div>
@@ -139,14 +144,14 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">WordPress Prep</h5>
-                            <p class="card-text">Familiar with WordPress theme anatomy, template hierarchy, block-based styling, and creating reusable components to convert static designs into dynamic, maintainable themes.</p>
-                            <p class="card-text"><small class="text-body-secondary">Focus: Themes · Templates · Block Styling</small></p>
+                            <p class="card-text">Familiar with WordPress theme anatomy, template hierarchy, block-based styling, and creating reusable components to convert static designs into dynamic, maintainable themes. Developing themes with PHP and deploying sites on AWS.</p>
+                            <p class="card-text"><small class="text-body-secondary">Focus: Themes · PHP · AWS · Block Styling</small></p>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <button class="scroll-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">↓</button>
+            <button class="scroll-btn" data-scroll-target="projects">↓</button>
             </section>
 
             <div class="section-blend blend-skills-projects" aria-hidden="true"></div>
@@ -159,24 +164,41 @@
                     <h3>Recru — Founder & Product Designer</h3>
                     <p>Designed and launched a mobile-first recruitment companion app for Greek life, using Expo, React Native, and Firebase. Built structured notes, chapter filtering, user personalization, and custom theme support. Onboarded early adopters, supported live users, and scaled the app to new campuses across the U.S.</p>
                     <p class="project-skills">Mobile UX/UI Design, Expo, React Native, Firebase, App Store Connect, TestFlight</p>
-                    <a href="https://apps.apple.com/us/app/recru/id6769208783" target="_blank" rel="noopener">View Project</a>
+                    <div class="project-actions">
+                        <a href="https://apps.apple.com/us/app/recru/id6769208783" target="_blank" rel="noopener">View Project</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <h3>Nonprofit Homepage Mockup</h3>
-                    <p>Created a responsive nonprofit landing page with modern web best practices, clean visual hierarchy, and accessible interactions. Used semantic HTML5, CSS Grid, and Flexbox for mobile-first layouts. Added a polished hero, program cards with subtle hover effects, and an inclusive contact form with ARIA labels.</p>
+                    <p>Built a responsive nonprofit landing page with modern web best practices, clean visual hierarchy, and accessible interactions. Used semantic HTML5, CSS Grid, and Flexbox for mobile-first layouts. Includes a polished hero, program cards with hover effects, and an inclusive contact form with ARIA labels.</p>
                     <p class="project-skills">HTML, CSS, Grid, Flexbox, Responsive Design, Accessibility, Semantic HTML</p>
-                    <span class="project-soon">Case study coming soon</span>
+                    <div class="project-actions">
+                        <a href="https://mialc.github.io/nonprofit-landing-mockup/" target="_blank" rel="noopener">Live Site</a>
+                        <a href="https://github.com/mialc/nonprofit-landing-mockup" target="_blank" rel="noopener">View Code</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Campus Swap Marketplace — UX Research + Prototype</h3>
-                    <p>Researched and designed a safer campus marketplace experience for UCF students with clear buyer and seller flows, trust-building signals, and privacy-focused communication. Delivered polished prototypes that emphasize simple browsing, intuitive search, and reliable user confidence on mobile-first screens.</p>
-                    <p class="project-skills">Figma, UX Research, UI Design, Prototyping, User Testing</p>
-                    <span class="project-soon">Case study coming soon</span>
+                    <h3>Android Minesweeper</h3>
+                    <p>Built a fully playable Minesweeper game for Android in Java, handling grid generation, recursive tile reveal, flagging, win/loss detection, and game-state logic from scratch.</p>
+                    <p class="project-skills">Java, Android Studio, Game Logic, UI Layouts</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/mialc/android-minesweeper-game" target="_blank" rel="noopener">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Uhustle — Student Opportunity Hub</h3>
+                    <p>Designed an iOS prototype that gives students a single feed for gigs, jobs, clubs, and campus events, with one-tap redirects to the right app or form instead of competing with Instagram and LinkedIn for attention.</p>
+                    <p class="project-skills">Figma, Mobile UX/UI Design, Auto Layout, Prototyping</p>
+                    <div class="project-actions">
+                        <a href="https://www.figma.com/design/ap5YHXlfq4FHcYbN5Eoubj/Uhustle-Protype?node-id=0-1" target="_blank" rel="noopener">View Prototype</a>
+                        <a href="https://github.com/mialc/Uhustle" target="_blank" rel="noopener">View Repo</a>
+                    </div>
                 </div>
             </div>
-            <button class="scroll-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">↓</button>
+            <button class="scroll-btn" data-scroll-target="contact">↓</button>
             </section>
 
             <div class="section-blend blend-projects-contact" aria-hidden="true"></div>
@@ -200,15 +222,16 @@
                         </div>
                     </div>
                 </div>
-                <button class="scroll-btn" onclick="document.getElementById('hero').scrollIntoView({behavior: 'smooth'})">↑</button>
+                <button class="scroll-btn" data-scroll-target="hero">↑</button>
             </section>
 
             <footer class="site-footer" id="footer">
                 <div class="container">
-                    <div class="d-flex justify-content-between align-items-center" style="position: relative;">
+                    <div class="footer-row">
                         <p class="mb-0">&copy; <span id="footer-year">2025</span> Mia Carrillo. All rights reserved.</p>
-                        <p class="mb-0" style="position: absolute; left: 50%; transform: translateX(-50%); color: var(--camel); font-size: 0.8rem;">Designed and built using HTML, CSS & Bootstrap.</p>
+                        <p class="mb-0 footer-tagline">Designed and built using HTML, CSS & Bootstrap.</p>
                         <div class="d-flex gap-3">
+                            <a href="https://github.com/mialc" target="_blank" rel="noopener" class="footer-link">GitHub</a>
                             <a href="https://linkedin.com/in/mialcarrillo" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
                             <a href="mailto:miacarrillobusiness@gmail.com" class="footer-link">Email</a>
                         </div>
@@ -225,6 +248,19 @@
     document.addEventListener('mousemove', (e) => {
         glow.style.left = e.clientX + 'px';
         glow.style.top = e.clientY + 'px';
+    });
+
+    // Theme toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+        const b = document.body;
+        b.dataset.theme === 'dark' ? b.removeAttribute('data-theme') : b.setAttribute('data-theme', 'dark');
+    });
+
+    // Section scroll buttons
+    document.querySelectorAll('.scroll-btn[data-scroll-target]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            document.getElementById(btn.dataset.scrollTarget).scrollIntoView({ behavior: 'smooth' });
+        });
     });
 
     // Hero cursor-reactive grid reveal
