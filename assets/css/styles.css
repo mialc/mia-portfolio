@@ -129,10 +129,9 @@ nav a:hover {
     filter: brightness(0) invert(1);
 }
 
-.nav-divider {
-    width: 1px;
-    height: 20px;
-    background-color: #ffffff40;
+.nav-actions {
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-link-action {
