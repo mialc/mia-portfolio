@@ -129,6 +129,21 @@ nav a:hover {
     filter: brightness(0) invert(1);
 }
 
+.nav-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #ffffff40;
+}
+
+.nav-link-action {
+    opacity: 0.75;
+    font-size: 0.92rem;
+}
+
+.nav-link-action:hover {
+    opacity: 1;
+}
+
 .theme-toggle-btn {
     color: white;
     background: transparent;
